@@ -1,18 +1,28 @@
 <template>
-  <HelloWorld msg="Hello World!" />
+  <LayoutHeader>
+    <template v-slot:header>
+      <h1 class="cf-site-title">大橙子的网站</h1>
+    </template>
+  </LayoutHeader>
+  <LayoutBody>
+    <template v-slot:content>
+      <HelloWorld msg="Hello World!" ></HelloWorld>
+    </template>
+  </LayoutBody>
+  <LayoutFooter></LayoutFooter>
 </template>
 
 <script setup lang="ts">
-import HelloWorld from './components/HelloWorld.vue'
+import LayoutHeader from './components/LayoutHeader.vue';
+import LayoutBody from './components/LayoutBody.vue';
+import LayoutFooter from './components/LayoutFooter.vue';
+import HelloWorld from './components/HelloWorld.vue';
 </script>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+.cf-site-title {
+  display: flex;
+  align-items: center;
+  color: #fff;
 }
 </style>
