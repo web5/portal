@@ -1,5 +1,9 @@
 import { createApp } from 'vue'
 import './styles/base.less';
+import Particles from 'particles.vue3';
 import App from './App.vue'
 
-createApp(App).mount('#app')
+const app = createApp(App);
+app.use(Particles);
+
+app.mount('#app')

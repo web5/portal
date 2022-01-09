@@ -1,7 +1,7 @@
 <template>
-  <main class="cf-layout-body">
+  <div class="cf-layout">
     <slot></slot>
-  </main>
+  </div>
 </template>
 
 <script setup lang="ts">
@@ -9,13 +9,12 @@
 
 <style lang="less" scoped>
 @import '../styles/variable.less';
-  .cf-layout-body {
+  .cf-layout {
     display: flex;
     flex: auto;
-    min-height: 80vh;
+    flex-direction: column;
+    min-height: 0;
     width: 100%;
-    padding: 0 50px;
-    margin-top: @header-height;
   }
 </style>
 

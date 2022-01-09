@@ -1,10 +1,10 @@
 <template>
-  <div class="cf-layout-footer">
+  <footer class="cf-layout-footer">
     <div class="cf-layout-footer-content">
       <div>Copyright © {{startYear}} - {{curYear}} cfweb. All Rights Reserved</div>
       <div>大橙子 版权所有</div>
     </div>
-  </div>
+  </footer>
 </template>
 
 <script setup lang="ts">
@@ -16,10 +16,13 @@ const curYear = computed(() => new Date().getFullYear());
 </script>
 
 <style lang="less" scoped>
+@import '../styles/variable.less';
+
   .cf-layout-footer {
     display: flex;
+    flex: 0 0 auto;
     width: 100%;
-    height: 90px;
+    height: @footer-height;
     justify-content: center;
     align-items: center;
     .cf-layout-footer-content {
@@ -27,10 +30,6 @@ const curYear = computed(() => new Date().getFullYear());
       text-align: center;
       font-size: 12px;
       color: #999;
-      > div {
-        // height: 20px;
-        // list-style: 20px;
-      }
     }
   }
 </style>
