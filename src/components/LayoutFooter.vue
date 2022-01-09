@@ -2,7 +2,7 @@
   <footer class="cf-layout-footer">
     <div class="cf-layout-footer-content">
       <div>Copyright © {{startYear}} - {{curYear}} cfweb. All Rights Reserved</div>
-      <div>大橙子 版权所有</div>
+      <div>Cfweb 版权所有</div>
     </div>
   </footer>
 </template>
