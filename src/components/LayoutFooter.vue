@@ -13,7 +13,7 @@
   </footer>
 </template>
 
-<script setup lang="ts">
+<script setup lang="ts" >
 import { computed } from 'vue';
 
 const startYear = '2022'
