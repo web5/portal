@@ -3,7 +3,7 @@ a<template>
     <h1 class="cf-site-title"><a href="/">Cfweb</a></h1>
     <div class="cf-site-menu"></div>
     <div class="cf-site-info">
-      <h3><a href="/about">关于</a></h3>
+      <h3><a href="/portal/about">关于</a></h3>
     </div>
   </header>
 </template>

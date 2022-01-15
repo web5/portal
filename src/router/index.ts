@@ -1,7 +1,8 @@
 import {createWebHistory, createRouter} from 'vue-router';
 
-import Home from '../views/Home.vue';
-import About from '../views/About.vue';
+import Portal from '../views/portal/Index.vue';
+import Home from '../views/portal/Home.vue';
+import About from '../views/portal/About.vue';
 
 const history = createWebHistory();
 const router = createRouter({
@@ -9,13 +10,24 @@ const router = createRouter({
   routes:[
     {
       path:'/',
-      component: Home,
-      meta: {title: '首页/cfweb'}
-    },{
-      path:'/about',
-      component: About,
-      meta: {title: '关于/cfweb'}
-    }
+      redirect: '/portal/home',
+    },
+    {
+      path:'/portal',
+      component: Portal,
+      redirect: '/portal/home',
+      children: [
+        {
+          path:'/portal/home',
+          component: Home,
+          meta: {title: '首页/cfweb'}
+        },{
+          path:'/portal/about',
+          component: About,
+          meta: {title: '关于/cfweb'}
+        }
+      ]
+    },
   ]
 });
 
